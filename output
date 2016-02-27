@@ -1,0 +1,7 @@
+x1x@x1x-VirtualBox:~/dev/sage_test/zombie_debug$ sage zombie_test.sage
+Create instances
+continue?
+Run expect_quit
+Exiting Sage with PID 7668 running /usr/lib/sagemath/local/bin/sage-ipython --HistoryManager.hist_file=:memory: --colors=NoColor
+continue?
+x1x@x1x-VirtualBox:~/dev/sage_test/zombie_debug$ 

@@ -1,0 +1,303 @@
+systemd,1 splash nomdmonddf nomdmonisw
+  |-ModemManager,926
+  |   |-{gdbus},990
+  |   `-{gmain},984
+  |-NetworkManager,907 --no-daemon
+  |   |-dhclient,1172 -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf ...
+  |   |-dnsmasq,1181 --no-resolv --keep-in-foreground --no-hosts --bind-interfaces...
+  |   |-{gdbus},1005
+  |   `-{gmain},992
+  |-accounts-daemon,916
+  |   |-{gdbus},991
+  |   `-{gmain},985
+  |-agetty,1973 --noclear tty1 linux
+  |-at-spi-bus-laun,3265
+  |   |-dbus-daemon,3283 --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+  |   |-{dconf worker},3281
+  |   |-{gdbus},3267
+  |   `-{gmain},3266
+  |-at-spi2-registr,3285 --use-gnome-session
+  |   |-{gdbus},3290
+  |   `-{gmain},3289
+  |-avahi-daemon,906
+  |   `-avahi-daemon,940
+  |-avahi-dnsconfd,905 -s
+  |-clock-applet,3524
+  |   |-{dconf worker},3533
+  |   |-{gdbus},3532
+  |   `-{gmain},3530
+  |-cron,909 -f
+  |-cups-browsed,1018
+  |   |-{gdbus},1168
+  |   `-{gmain},1167
+  |-cupsd,1016 -l
+  |-dbus-daemon,930 --system --address=systemd: --nofork --nopidfile --systemd-activation
+  |-dbus-daemon,3255 --fork --print-pid 5 --print-address 7 --session
+  |-dbus-daemon,6566 --fork --print-pid 5 --print-address 7 --session
+  |-dbus-launch,3254 --exit-with-session /usr/bin/im-launch mate-session
+  |-dbus-launch,6565 --autolaunch=46e8fcd610f94b51819078e0af53eb6f --binary-syntax --close-stderr
+  |-dconf-service,3293
+  |   |-{gdbus},3295
+  |   `-{gmain},3294
+  |-dconf-service,6569
+  |   |-{gdbus},6571
+  |   `-{gmain},6570
+  |-dropbox,3477
+  |   |-{QXcbEventReader},3569
+  |   |-{dropbox},3561
+  |   |-{dropbox},3562
+  |   |-{dropbox},3570
+  |   |-{dropbox},3571
+  |   |-{dropbox},3578
+  |   |-{dropbox},3579
+  |   |-{dropbox},3580
+  |   |-{dropbox},3581
+  |   |-{dropbox},3582
+  |   |-{dropbox},3583
+  |   |-{dropbox},3584
+  |   |-{dropbox},3585
+  |   |-{dropbox},3586
+  |   |-{dropbox},3587
+  |   |-{dropbox},3588
+  |   |-{dropbox},3595
+  |   |-{dropbox},3596
+  |   |-{dropbox},3597
+  |   |-{dropbox},3598
+  |   |-{dropbox},3599
+  |   |-{dropbox},3600
+  |   |-{dropbox},3601
+  |   |-{dropbox},3602
+  |   |-{dropbox},3603
+  |   |-{dropbox},3604
+  |   |-{dropbox},3605
+  |   |-{dropbox},3606
+  |   |-{dropbox},3607
+  |   |-{dropbox},3608
+  |   |-{dropbox},3609
+  |   |-{dropbox},3610
+  |   |-{dropbox},3611
+  |   |-{dropbox},3612
+  |   |-{dropbox},3613
+  |   |-{dropbox},3614
+  |   |-{dropbox},3615
+  |   |-{dropbox},3616
+  |   |-{dropbox},3620
+  |   |-{dropbox},3622
+  |   |-{dropbox},3623
+  |   |-{dropbox},3624
+  |   |-{dropbox},3635
+  |   |-{dropbox},3641
+  |   |-{dropbox},3642
+  |   |-{dropbox},3646
+  |   |-{dropbox},3647
+  |   |-{dropbox},3648
+  |   |-{dropbox},3649
+  |   |-{dropbox},3650
+  |   `-{dropbox},3651
+  |-gconfd-2,3505
+  |-gnome-keyring-d,3186 --daemonize --login
+  |   |-{dconf worker},3299
+  |   |-{gdbus},3298
+  |   |-{gmain},3187
+  |   `-{timer},3297
+  |-gvfs-afc-volume,3453
+  |   |-{gdbus},3493
+  |   |-{gmain},3485
+  |   `-{gvfs-afc-volume},3484
+  |-gvfs-gphoto2-vo,3407
+  |   |-{gdbus},3443
+  |   `-{gmain},3435
+  |-gvfs-mtp-volume,3358
+  |   |-{gdbus},3394
+  |   `-{gmain},3392
+  |-gvfs-udisks2-vo,3326
+  |   |-{gdbus},3330
+  |   `-{gmain},3329
+  |-gvfsd,3269
+  |   |-{gdbus},3271
+  |   `-{gmain},3270
+  |-gvfsd-cdda,3541 --spawner :1.2 /org/gtk/gvfs/exec_spaw/1
+  |   |-{gdbus},3543
+  |   `-{gmain},3542
+  |-gvfsd-fuse,3274 /run/user/1000/gvfs -f -o big_writes
+  |   |-{gdbus},3280
+  |   |-{gmain},3279
+  |   |-{gvfs-fuse-sub},3288
+  |   |-{gvfsd-fuse},3276
+  |   `-{gvfsd-fuse},3278
+  |-gvfsd-metadata,3556
+  |   |-{gdbus},3558
+  |   `-{gmain},3557
+  |-gvfsd-trash,3495 --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
+  |   |-{gdbus},3502
+  |   `-{gmain},3501
+  |-irqbalance,978 --pid=/var/run/irqbalance.pid
+  |-kerneloops,1022
+  |-lightdm,1334
+  |   |-Xorg,1908 -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+  |   |-lightdm,1962 --session-child 12 19
+  |   |   |-mate-session,3188
+  |   |   |   |-applet.py,3332 /usr/share/system-config-printer/applet.py
+  |   |   |   |   `-{gmain},3517
+  |   |   |   |-caja,3318
+  |   |   |   |   |-{dconf worker},3446
+  |   |   |   |   |-{gdbus},3430
+  |   |   |   |   |-{gmain},3429
+  |   |   |   |   `-{threaded-ml},3549
+  |   |   |   |-deja-dup-monito,3408
+  |   |   |   |   |-deja-dup,4771 --backup --auto
+  |   |   |   |   |   |-{dconf worker},4774
+  |   |   |   |   |   |-{gdbus},4773
+  |   |   |   |   |   `-{gmain},4772
+  |   |   |   |   |-{dconf worker},3437
+  |   |   |   |   |-{gdbus},3427
+  |   |   |   |   `-{gmain},3426
+  |   |   |   |-marco,3304
+  |   |   |   |   |-{dconf worker},3307
+  |   |   |   |   |-{gdbus},3306
+  |   |   |   |   `-{gmain},3305
+  |   |   |   |-mate-maximus,3399
+  |   |   |   |   |-{dconf worker},3432
+  |   |   |   |   |-{gdbus},3405
+  |   |   |   |   `-{gmain},3404
+  |   |   |   |-mate-panel,3309
+  |   |   |   |   |-{dconf worker},3316
+  |   |   |   |   |-{gdbus},3315
+  |   |   |   |   |-{gmain},3314
+  |   |   |   |   `-{threaded-ml},3652
+  |   |   |   |-mate-power-mana,3324
+  |   |   |   |   |-{dconf worker},3450
+  |   |   |   |   |-{gdbus},3434
+  |   |   |   |   `-{gmain},3433
+  |   |   |   |-mate-screensave,3327
+  |   |   |   |   |-{dconf worker},3345
+  |   |   |   |   |-{gdbus},3341
+  |   |   |   |   `-{gmain},3340
+  |   |   |   |-mate-settings-d,3300
+  |   |   |   |   |-{dconf worker},3303
+  |   |   |   |   |-{dconf worker},3308
+  |   |   |   |   |-{gdbus},3302
+  |   |   |   |   `-{gmain},3301
+  |   |   |   |-mate-volume-con,3400
+  |   |   |   |   |-{gdbus},3509
+  |   |   |   |   `-{gmain},3508
+  |   |   |   |-nm-applet,3344
+  |   |   |   |   |-{dconf worker},3431
+  |   |   |   |   |-{gdbus},3379
+  |   |   |   |   `-{gmain},3378
+  |   |   |   |-polkit-mate-aut,3343
+  |   |   |   |   |-{gdbus},3373
+  |   |   |   |   `-{gmain},3372
+  |   |   |   |-ssh-agent,3250 /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch mate-session
+  |   |   |   |-update-notifier,3331
+  |   |   |   |   |-{dconf worker},3442
+  |   |   |   |   |-{gdbus},3371
+  |   |   |   |   `-{gmain},3370
+  |   |   |   |-zeitgeist-datah,3335
+  |   |   |   |   |-{gdbus},3350
+  |   |   |   |   |-{gmain},3346
+  |   |   |   |   |-{pool},3381
+  |   |   |   |   |-{pool},3382
+  |   |   |   |   |-{pool},3383
+  |   |   |   |   |-{pool},3384
+  |   |   |   |   |-{pool},3385
+  |   |   |   |   |-{pool},3386
+  |   |   |   |   |-{pool},3387
+  |   |   |   |   `-{pool},3388
+  |   |   |   |-{dconf worker},3291
+  |   |   |   |-{gdbus},3287
+  |   |   |   `-{gmain},3286
+  |   |   |-{gdbus},3180
+  |   |   `-{gmain},3179
+  |   |-{gdbus},1338
+  |   `-{gmain},1336
+  |-master,1169
+  |   |-pickup,6381 -l -t unix -u -c
+  |   `-qmgr,1171 -l -t unix -u
+  |-mdadm,962 --monitor --pid-file /run/mdadm/monitor.pid --daemonise --scan --syslog
+  |-notification-ar,3525
+  |   |-{gdbus},3529
+  |   `-{gmain},3527
+  |-ntpd,1033 -p /var/run/ntpd.pid -g -u 108:115
+  |-polkitd,1024 --no-debug
+  |   |-{gdbus},1032
+  |   `-{gmain},1030
+  |-pulseaudio,3313 --start --log-target=syslog
+  |   |-{alsa-sink-ALC12},3444
+  |   |-{alsa-sink-HDMI },3317
+  |   `-{alsa-source-ALC},3447
+  |-recollindex,4758 -n -w 60 -m
+  |   |-{recollindex},4819
+  |   |-{recollindex},4821
+  |   |-{recollindex},4822
+  |   |-{recollindex},4823
+  |   |-{recollindex},4824
+  |   |-{recollindex},4825
+  |   |-{recollindex},4826
+  |   |-{recollindex},4827
+  |   `-{recollindex},4828
+  |-rsyslogd,902 -n
+  |   |-{in:imklog},980
+  |   |-{in:imuxsock},979
+  |   `-{rs:main Q:Reg},981
+  |-rtkit-daemon,1550
+  |   |-{rtkit-daemon},1552
+  |   `-{rtkit-daemon},1553
+  |-screen,2178
+  |   |-bash,2179
+  |   |   `-emacs,2189
+  |   |       |-bash,2195 --noediting -i
+  |   |       |-bash,7607 --noediting -i
+  |   |       |   `-bash,7619 /usr/lib/sagemath/local/bin/sage-python zombie_test.sage.py
+  |   |       |       |-python,7661 /usr/lib/sagemath/local/bin/sage-cleaner
+  |   |       |       `-python,7663 zombie_test.sage.py
+  |   |       |           |-python,7668 /usr/lib/sagemath/local/bin/sage-ipython --HistoryManager.hist_file=:memory: ...
+  |   |       |           `-(python,7669)
+  |   |       `-{gmain},2190
+  |   |-bash,2259
+  |   |   `-pstree,7675 -a -p
+  |   `-bash,2283
+  |-sshd,1002 -D
+  |   |-sshd,6442    
+  |   |   `-sshd,6530     
+  |   |       `-bash,6531
+  |   |           `-screen,6837 -r -d
+  |   `-sshd,7673   
+  |       `-sshd,7674    
+  |-systemd,2092 --user
+  |   `-(sd-pam),2093                               
+  |-systemd-journal,356
+  |-systemd-logind,1010
+  |-systemd-udevd,369
+  |-tilda,3367
+  |   |-bash,3474
+  |   |-gnome-pty-helpe,3467
+  |   |-{gdbus},3410
+  |   `-{gmain},3409
+  |-timidity,988 -Os -iAD
+  |-trashapplet,3323
+  |   |-{gdbus},3339
+  |   `-{gmain},3336
+  |-udisksd,1605 --no-debug
+  |   |-{cleanup},1657
+  |   |-{gdbus},1624
+  |   |-{gmain},1622
+  |   `-{probing-thread},1643
+  |-upowerd,1649
+  |   |-{gdbus},1704
+  |   `-{gmain},1698
+  |-uuidd,1890 --socket-activation
+  |-whoopsie,914 -f
+  |   |-{gdbus},993
+  |   `-{gmain},989
+  |-wnck-applet,3321
+  |   |-{dconf worker},3521
+  |   |-{gdbus},3338
+  |   `-{gmain},3333
+  |-wpa_supplicant,1065 -u -s -O /run/wpa_supplicant
+  |-zeitgeist-daemo,3352
+  |   |-{gdbus},3355
+  |   `-{gmain},3354
+  `-zeitgeist-fts,3364
+      |-{gdbus},3375
+      `-{gmain},3374
